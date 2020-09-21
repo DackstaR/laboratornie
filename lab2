@@ -1,0 +1,23 @@
+#include <iostream> 
+#include <stdio.h> 
+#include<math.h> 
+#include <clocale> 
+using namespace std;
+int main() {
+	double a, b, c;
+	setlocale(0, "rus");
+	printf("Введите числа для переменных a,b,c\n");
+	scanf_s("%lf%lf%lf", &a, &b, &c);
+	if ((a >= b) && (b >= c)) {
+		a *= 2;
+		b *= 2;
+		c *= 2;
+	}
+	else {
+		a = abs(a);
+		b = abs(b);
+		c = abs(c);
+	}
+	printf("a = %lf, b = %lf, c = %lf", a, b, c);
+	return 0;
+}
