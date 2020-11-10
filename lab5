@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <time.h>
+#include <stdlib.h>
+void main()
+{
+	srand(time(NULL));
+	int mas[7][8];
+	int kol[8] = { 0 };
+	for (int i = 0; i < 7; i++)
+	{
+		for (int j = 0; j < 8; j++)
+		{
+			mas[i][j] = rand() % 100;
+			printf("%3i", mas[i][j]);
+		}
+		printf("\n");
+	}
+	printf("\n");
+	for (int j = 0; j < 8; j++)
+	{
+		for (int i = 0; i < 7; i++)
+		{
+			if (mas[i][j] % 2)
+			{
+				kol[j]++;
+			}
+		}
+		printf("#%i: %i\n", j, kol[j]);
+	}
+}
